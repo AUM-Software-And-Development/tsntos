@@ -6,7 +6,6 @@
 ; MBR section:
 ;
 ;
-	
 	jmp 0x7c0:2
 mov byte [bootdisk], dl
 mov ax, cs
