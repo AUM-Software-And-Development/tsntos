@@ -28,7 +28,6 @@
 ;
 	vgaaddress:
 dw 0xa000
-
 	display_build:
 pusha
 
@@ -78,9 +77,7 @@ es mov [bx], al
 inc bx
 jmp .aloop
 
-
-
 display_close:
 popa
-lvs cs
+	lvars cs
 ret
