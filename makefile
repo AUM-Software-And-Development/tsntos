@@ -12,7 +12,7 @@ tsnt-os:
 	make -s clean
 	nasm -f bin bootloader-16-bits.asm
 	nasm -f elf32 kernel-16-bits.asm -o kernel-16-bits.o
-	clang -c -ffreestanding -m32 -O1 -o os-16-bits.o os.c
+	clang -c -ffreestanding -m32 -O1 --target=i386-none -o os-16-bits.o os.c
 	ld -m elf_i386 -T os.ld
 	cat $(output) > tsnt-os.bin
 	mv *.bin bin

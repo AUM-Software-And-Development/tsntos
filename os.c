@@ -1,8 +1,8 @@
 #pragma once
 
-typedef int Integer;
+#include "compile-targets.h"
 
-extern display_build();
+typedef int Integer;
 
 int os()
 {
